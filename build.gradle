@@ -19,12 +19,20 @@ repositories {
 
 ext {
     set('springCloudVersion', "2023.0.3")
+    set('logbookVersion', "3.9.0")
+    set('logstashVersion', "8.0")
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    implementation "org.zalando:logbook-spring-boot-starter:${logbookVersion}"
+    implementation "org.zalando:logbook-spring-boot-webflux-autoconfigure:${logbookVersion}"
+    implementation "org.zalando:logbook-logstash:${logbookVersion}"
+    implementation "net.logstash.logback:logstash-logback-encoder:${logstashVersion}"
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
