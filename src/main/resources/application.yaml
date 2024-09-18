@@ -29,4 +29,14 @@ spring:
 #    root: error
 #    reactor.netty: trace
 #    org.springframework.cloud.gateway: trace
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
 #    org.springframework.http.server.reactive: trace
