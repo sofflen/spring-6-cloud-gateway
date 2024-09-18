@@ -24,11 +24,13 @@ spring:
 #        wiretap: true
 #      httpclient:
 #        wiretap: true
-#logging:
-#  level:
+logging:
+  level:
+    org.zalando.logbook: trace
 #    root: error
 #    reactor.netty: trace
 #    org.springframework.cloud.gateway: trace
+#    org.springframework.http.server.reactive: trace
 management:
   endpoint:
     health:
@@ -39,4 +41,3 @@ management:
       enabled: true
     livenessstate:
       enabled: true
-#    org.springframework.http.server.reactive: trace
